@@ -1,0 +1,17 @@
+CAFÉ HOSPEDAGEM — PACOTE PRONTO PARA GITHUB PAGES
+
+1. Extraia este ZIP.
+2. No repositório do GitHub, substitua os arquivos antigos pelos arquivos deste pacote.
+3. É MUITO IMPORTANTE substituir o arquivo:
+   .github/workflows/nextjs.yml
+4. Confirme que o branch principal é "main".
+5. Em Settings > Pages > Build and deployment, escolha "GitHub Actions".
+6. Faça o commit/push. O workflow "Deploy GitHub Pages" será executado automaticamente.
+
+Correção aplicada:
+- removido o workflow padrão que usava actions/configure-pages com injeção de next.config.js;
+- configuração convertida para next.config.mjs compatível com "type": "module";
+- Node.js 22 configurado no Actions;
+- exportação estática para a pasta out;
+- basePath/assetPrefix automáticos para o nome do repositório;
+- .nojekyll incluído para o GitHub Pages.
